@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enter your choices and spin a colorful wheel to pick one at random.">
+    <title>Spin It! Random Choice Wheel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Spin It home">
+            <span>Spin It! ✦</span>
+        </a>
+
+        <a class="support-link" href="https://ko-fi.com/redstarblankies" aria-label="Support this tool">
+            ♡ Support this project
+        </a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <h1>Can’t decide?<br><span>Let the wheel choose.</span></h1>
+                <p>
+                    Add your options, press spin, and let chance make the decision for you.
+                </p>
+            </div>
+        </section>
+
+        <section class="app-shell" aria-label="Random choice wheel">
+            <aside class="choices-card">
+                <div class="card-heading">
+                    <div>
+                        <h2>Your choices</h2>
+                    </div>
+                    <span id="choice-count" class="count-badge">6 choices</span>
+                </div>
+
+                <p class="helper-text">
+                    Edit the labels below. The wheel updates automatically.
+                </p>
+
+                <div id="choice-list" class="choice-list"></div>
+
+                <div class="choice-actions">
+                    <button id="add-choice" class="secondary-button" type="button">
+                        + Add choice
+                    </button>
+                    <button id="clear-choices" class="text-button" type="button">
+                        Reset
+                    </button>
+                </div>
+
+                <p class="limit-note">3–12 choices</p>
+            </aside>
+
+            <section class="wheel-card">
+                <div class="wheel-stage">
+                    <div class="wheel-wrap">
+                        <div class="pointer" aria-hidden="true"></div>
+
+                        <canvas id="wheel" width="500" height="500">
+                            Your browser does not support the canvas element.
+                        </canvas>
+
+                        <div class="winner-particles" id="winner-particles" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <button id="spin-button" class="spin-button" type="button">
+                    <span>SPIN</span>
+                    <span class="spin-icon">↻</span>
+                </button>
+
+                <div id="winner" class="winner-panel" aria-live="polite">
+                    <strong>Enter your choices and spin!</strong>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>Spin It!</strong>
+            <p>A simple random choice wheel for everyday decisions.</p>
+        </div>
+
+        <a href="https://ko-fi.com/redstarblankies" class="footer-support">♡ Support this projectl</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
