@@ -12,7 +12,7 @@ A simple random choice wheel built with HTML, CSS, and JavaScript.
 
 ## Live Site
 
-[Open Spin It!]()
+[Open Spin It!](https://redstarblanket.github.io/spin-it/)
 
 ## Built With
 
